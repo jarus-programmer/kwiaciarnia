@@ -1,0 +1,833 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Text:ital@0;1&display=swap" rel="stylesheet">
+
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Nunito:ital,wght@0,200..1000;1,200..1000&family=Roboto:ital,wght@0,100..900;1,100..900&family=Zain:ital,wght@0,200;0,300;0,400;0,700;0,800;0,900;1,300;1,400&display=swap" rel="stylesheet">
+        <title>
+            Logowanie
+        </title>
+        <body>
+            <style>
+body {
+    margin: 0px;
+    font-family: 'Montserrat', sans-serif;
+}
+
+a {
+    color: black;
+}
+
+ul {
+    list-style-type: none;
+}
+
+li {
+    display: inline-block;
+}
+
+.container a {
+    text-decoration: none;
+}
+
+.navbar a {
+    text-decoration: none;
+}
+
+.zamow-teraz {
+    width: 100%;
+    height: 7%;
+    margin-top: -20px;
+    background: #3b2d24;
+    background: linear-gradient(90deg,rgba(59, 45, 36, 1) 0%, rgba(179, 139, 100, 1) 50%, rgba(59, 45, 36, 1) 100%);
+    text-align: center;
+}
+
+#tytul {
+    font-size: 18.5px;
+    color: black;
+    padding: 0.3%;
+}
+
+#tytul a:hover {
+    color: beige;
+    transition-duration: 0.2s;
+}
+
+.container {
+    width: 100%;
+    height: 20%;
+    margin: 0;
+}
+
+.logo-profile {
+    text-align: center;
+}
+
+#flowwy {
+    width: 40%;
+    height: 40%;
+    margin-left: 20px;
+}
+
+#profile {
+    width: 30%;
+    height: 30%;
+}
+
+#cart {
+    width: 80%;
+    height: 80%;
+    margin-left: -80px;
+}
+
+.space {
+    width: 750px;
+}
+
+.space1 {
+    width: 200px;
+}
+
+.navbar { 
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    padding: 20px 0;
+}
+
+.menu {
+    display: inline-flex;
+    margin: 0;
+    padding: 0;
+    position: relative;
+    font-size: 17px;
+    gap: 25px;
+    justify-content: center;
+}
+
+.menu > li {
+    position: relative;
+    margin: 0 15px;
+}
+
+.dropdown {
+    position: relative;
+}
+
+.submenu {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 50%;
+    transform: translateX(-50%);
+    background: white;
+    min-width: 200px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+    padding: 10px 0;
+    z-index: 100; /* określa kolejność nakładania się elementów na stronie, czyli który element zostanie wyświetlony na wierzchu, a który za nim */
+    text-align: left;
+}
+
+.submenu li {
+    display: block;
+    margin: 0;
+    padding: 0;
+}
+
+.submenu a {
+    padding: 8px 20px;
+    display: block;
+    white-space: nowrap;
+    transition: all 0.4s;
+}
+
+.submenu a:hover {
+    background: #f5f5f5;
+}
+
+.menu > li > a {
+    position: relative;
+    padding-bottom: 5px;
+}
+
+.menu > li > a::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    height: 2px;
+    background-color: black;
+    transform: scaleX(0);
+    transform-origin: center; /* określa punkt odniesienia dla transformacji elementu, takich jak obrót, skalowanie czy przechylenie, w tym przypadku będzie się znajdował punkt w centrum elementu */
+    transition: transform 0.5s ease;
+}
+.submenu {
+    transition: all 0.3s ease;
+    opacity: 0;
+    visibility: hidden;
+}
+
+.dropdown:hover .submenu {
+    display: block;
+    opacity: 1;
+    visibility: visible;
+    top: 40px;
+}
+
+.menu > li:hover > a::after {
+    transform: scaleX(1);
+}
+
+#for-login-box {
+    width: 60px;
+    height: auto;
+}
+
+.features-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 20px;
+    justify-items: center;
+}
+
+.feature {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    max-width: 200px;
+}
+
+.feature-icon {
+    width: 50px;
+    height: 50px;
+    margin-bottom: 15px;
+}
+
+.feature-text {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 16px;
+    font-weight: 500;
+}
+
+.feature-desc {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 14px;
+}
+
+.footer-container {
+    background-color: #f8f8f8;
+    padding: 40px 20px;
+    margin-top: 50px;
+}
+
+.footer-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 30px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.footer-column h6 {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 16px;
+    margin-bottom: 20px;
+    color: #3b2d24;
+}
+
+.footer-column ul {
+    padding: 0;
+}
+
+.footer-column li {
+    display: block;
+    margin-bottom: 10px;
+}
+
+.footer-column a {
+    text-decoration: none;
+    color: #555;
+    font-size: 14px;
+    transition: color 0.3s;
+}
+
+.footer-column a:hover {
+    color: #2f2010;
+}
+
+.social-icons {
+    display: flex;
+    gap: 15px;
+    justify-content: center;
+}
+
+.desc-of-column {
+    text-align: center;
+}
+
+.title-of-column {
+    text-align: center;
+}
+
+.social-icons img {
+    width: 40px;
+    height: 40px;
+}
+
+.login-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+    box-sizing: border-box;
+}
+
+.login-box {
+    background-color: white;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    max-width: 400px;
+    text-align: center;
+}
+
+.login-box h2 {
+    color: #3b2d24;
+    margin-bottom: 25px;
+    font-family: 'DM Serif Text', serif;
+    font-weight: 400;
+    font-size: 24px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+}
+
+.login-box h2 img {
+    width: 24px; 
+    height: 24px;
+}
+
+.input-group {
+    margin-bottom: 20px;
+    text-align: left;
+}
+
+.input-group label {
+    display: block;
+    margin-bottom: 8px;
+    color: #555;
+    font-size: 14px;
+    font-weight: 500;
+} 
+
+.input-group input {
+    width: 100%;
+    padding: 12px 15px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    font-family: 'Montserrat', sans-serif;
+    transition: all 0.3s;
+    box-sizing: border-box;
+}
+
+.input-group input:focus {
+    border-color: #b38b64;
+    outline: none;
+    box-shadow: 0 0 0 2px rgba(179, 139, 100, 0.2);
+}
+
+.login-button {
+    background-color: #b38b64;
+    border: none;
+    padding: 14px 0;
+    width: 100%;
+    font-size: 15px;
+    border-radius: 5px;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    margin-top: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.login-button:hover {
+    background-color: #9a7552;
+}
+
+.login-links {
+    margin-top: 20px;
+    font-size: 14px;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+.login-links a {
+    color: #534333;
+    text-decoration: none;
+    transition: color 0.3s;
+    white-space: nowrap;
+}
+
+.login-links a:hover {
+    color: #000000;
+}
+
+.login-links span {
+    display: inline;
+}
+
+.divider {
+    margin: 25px 0;
+    border-top: 1px solid #eee;
+    position: relative;
+}
+
+.divider-text {
+    position: absolute;
+    top: -10px;
+    left: 50%;
+    transform: translateX(-50%);
+    background: white;
+    padding: 0 15px;
+    color: #777;
+    font-size: 12px;
+}
+
+.social-login {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    margin-top: 20px;
+}
+
+.social-login a {
+    display: inline-flex;
+    width: 45px;
+    height: 45px;
+    border-radius: 50%;
+    background-color: #f5f5f5;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.3s;
+}
+
+.social-login a:hover {
+    background-color: #e0e0e0;
+    transform: translateY(-2px);
+}
+
+.social-login img {
+    width: 22px;
+    height: 22px;
+}
+
+.error-message {
+    color: #d9534f;
+    font-size: 12px;
+    margin-top: 5px;
+    display: none;
+}
+
+.input-error {
+    border-color: #d9534f !important;
+}
+
+@media (max-width: 768px) {
+    .login-container {
+        min-height: calc(100vh - 150px);
+        padding: 15px;
+    }
+    
+    .login-box {
+        padding: 25px 20px;
+    }
+    
+    .login-box h2 {
+        font-size: 22px;
+        margin-bottom: 20px;
+    }
+    
+    .login-box h2 img {
+        width: 22px;
+        height: 22px;
+    }
+    
+    .input-group input {
+        padding: 10px 12px;
+    }
+    
+    .login-button {
+        padding: 12px 0;
+    }
+    
+    .login-button img {
+        width: 22px;
+        height: 22px;
+    }
+    
+    .social-login a {
+        width: 42px;
+        height: 42px;
+    }
+}
+
+@media (max-width: 768px) {
+    .zamow-teraz {
+        height: auto;
+        padding: 10px 0;
+    }
+    
+    #tytul {
+        font-size: 14px;
+        padding: 10px;
+    }
+    
+    .logo-profile-cart ul.nav {
+        flex-direction: row;
+        justify-content: space-between;
+        padding: 0 15px;
+    }
+    
+    .space, .space1 {
+        display: none;
+    }
+    
+    #flowwy {
+        width: 120px;
+        height: auto;
+        margin: 0;
+    }
+    
+    #profile, #cart {
+        width: 30px;
+        height: 30px;
+        margin: 0;
+    }
+
+    .navbar {
+        padding: 10px 0;
+    }
+    
+    .menu {
+        flex-direction: column;
+        gap: 5px;
+        padding: 0 15px;
+    }
+    
+    .menu > li {
+        width: 100%;
+        margin: 5px 0;
+        text-align: center;
+    }
+    
+    .dropdown:hover .submenu {
+        position: static;
+        transform: none;
+        width: 100%;
+        box-shadow: none;
+    }
+}
+
+@media (max-width: 480px) {
+    .login-box {
+        padding: 20px 15px;
+        margin: 0 10px;
+    }
+    
+    .login-box h2 {
+        font-size: 20px;
+    }
+    
+    .input-group input {
+        padding: 10px 12px;
+    }
+    
+    .login-button {
+        padding: 12px 0;
+        font-size: 14px;
+    }
+    
+    .login-links {
+        flex-direction: column;
+        gap: 5px;
+    }
+    
+    .login-links span {
+        display: none;
+    }
+    
+    .social-login {
+        gap: 10px;
+    }
+    
+    .social-login a {
+        width: 40px;
+        height: 40px;
+    }
+    
+    .social-login img {
+        width: 20px;
+        height: 20px;
+    }
+    
+    .footer-grid {
+        grid-template-columns: 1fr;
+        gap: 20px;
+    }
+    
+    .footer-column {
+        text-align: center;
+    }
+    
+    .social-icons {
+        justify-content: center;
+    }
+}
+
+            </style>
+            <header>
+            <div class="container">
+                <div class="zamow-teraz"><p id="tytul"><a href="{{ url_for('views.order') }}" target="_blank" id="tytul">Zamów teraz i przywieziemy do Ciebie kwiaty jutro!</a></p></div>
+                <div class="logo-profile-cart">
+                    <ul class="nav">
+                        <li>
+                            <div class="space"></div>
+                        </li>
+                        <li class="nav-item">
+                            <a href="{{ url_for('views.home') }}"><img src="{{ url_for('static', filename='pictures-for-site/logo.jpg') }}" alt="logo" id="flowwy"></a>
+                        </li>
+                        <li>
+                            <div class="space1"></div>
+                        <li class="nav-item">
+                            <a href="{{ url_for('views.login') }}" target="_blank"><img src="{{ url_for('static', filename='pictures-for-site/profile.png') }}" alt="profil" id="profile"></a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="{{ url_for('views.order') }}" target="_blank"><img src="{{ url_for('static', filename='pictures-for-site/cart.png') }}" alt="koszyk" id="cart"></a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </header>
+        <section>
+            <div>
+                <nav class="navbar">
+                    <ul class="menu">
+                        <li class="mother">
+                            <a href="{{ url_for('views.mother') }}" target="_blank">DZIEŃ MATKI</a>
+                        </li>
+                        <li class="dropdown">
+                            <a href="{{ url_for('views.flower') }}" target="_blank">KWIATY</a>
+                            <ul class="submenu">
+                                <li><a href="{{ url_for('views.flower') }}" target="_blank">Róże</a></li>
+                                <li><a href="{{ url_for('views.flower') }}" target="_blank">Bukiety</a></li>
+                                <li><a href="{{ url_for('views.flower') }}" target="_blank">Tulipany</a></li>
+                                <li><a href="{{ url_for('views.flower') }}" target="_blank">Storczyk</a></li>
+                            </ul>
+                        </li>
+                        <li class="dropdown">
+                            <a href="{{ url_for('views.gift') }}" target="_blank">PREZENTY</a>
+                            <ul class="submenu">
+                                <li><a href="{{ url_for('views.gift') }}" target="_blank">Misie</a></li>
+                                <li><a href="{{ url_for('views.gift') }}" target="_blank">Wazony</a></li>
+                                <li><a href="{{ url_for('views.gift') }}" target="_blank">Czekoladowy box</a></li>
+                                <li><a href="{{ url_for('views.gift') }}" target="_blank">Karty podarunkowe</a></li>
+                            </ul>
+                        </li>
+                        <li class="dropdown">
+                            <a href="{{ url_for('views.occasion') }}" target="_blank">OKAZJE</a>
+                            <ul class="submenu">
+                                <li><a href="{{ url_for('views.occasion') }}" target="_blank">Ślub</a></li>
+                                <li><a href="{{ url_for('views.occasion') }}" target="_blank">Urodziny</a></li>
+                                <li><a href="{{ url_for('views.occasion') }}" target="_blank">Rocznica</a></li>
+                                <li><a href="{{ url_for('views.occasion') }}" target="_blank">Ukończenie szkoły</a></li>
+                            </ul>
+                        </li>
+                        <li class="dropdown">
+                            <a href="{{ url_for('views.funeral') }}" target="_blank">KWIATY POGRZEBOWE</a>
+                            <ul class="submenu">
+                                <li><a href="{{ url_for('views.funeral') }}" target="_blank">Wieńce</a></li>
+                                <li><a href="{{ url_for('views.funeral') }}" target="_blank">Bukiet współczucia</a></li>
+                                <li><a href="{{ url_for('views.funeral') }}" target="_blank">Bukiety pogrzebowe</a></li>
+                                <li><a href="{{ url_for('views.funeral') }}" target="_blank">Bukiet do trzymania</a></li>
+                            </ul>
+                        </li>
+                    </ul>
+                </nav>
+        </section>
+        <section class="login-container">
+        <div class="login-box">
+            <h2>
+                Zaloguj się
+            </h2>
+            <form id="loginForm" action="/login" method="POST">
+                <div class="input-group">
+                    <label for="email">Adres e-mail</label>
+                    <input type="text" id="email" name="email" required placeholder="np. przyklad@domena.pl">
+                    <div id="emailError" class="error-message">Proszę wprowadzić poprawny adres e-mail (musi zawierać @)</div>
+                </div>
+                <div class="input-group">
+                    <label for="password">Hasło</label>
+                    <input type="password" id="password" name="password" required placeholder="Wprowadź swoje hasło">
+                </div>
+                <button type="submit" class="login-button">Wyślij</button>
+            </form>
+            <div class="login-links">
+                <a href="{{ url_for('views.password') }}" target="_blank">Zapomniałeś hasła?</a>
+                <span> | </span>
+                <a href="{{ url_for('views.register') }}" target="_blank">Załóż konto</a>
+            </div>
+            <div class="divider">
+                <span class="divider-text">LUB</span>
+            </div>
+            <div class="social-login">
+                <a href="https://www.facebook.com/" title="Zaloguj się przez Facebook">
+                    <img src="{{ url_for('static', filename='pictures-for-site/facebook.webp') }}" alt="Facebook">
+                </a>
+                <a href="https://www.google.com/" title="Zaloguj się przez Google">
+                    <img src="{{ url_for('static', filename='pictures-for-site/google.webp') }}" alt="Google">
+                </a>
+            </div>
+        </section>
+        <footer>
+            <div class="footer-container">
+                <div class="footer-grid">
+                    <div class="footer-column">
+                        <h6 class="title-of-column">FLOWWY</h6>
+                        <ul class="desc-of-column">
+                            <li><a href="{{ url_for('views.kontakt') }}">O nas</a></li>
+                            <li><a href="{{ url_for('views.kontakt') }}">Polityka cenowa</a></li>
+                            <li><a href="{{ url_for('views.kontakt') }}">Warunki i regulamin</a></li>
+                            <li><a href="{{ url_for('views.kontakt') }}">Bezpieczeństwo klienta</a></li>
+                        </ul>
+                    </div>
+                    <div class="footer-column">
+                        <h6 class="title-of-column">OBSŁUGA KLIENTA</h6>
+                        <ul class="desc-of-column">
+                            <li><a href="{{ url_for('views.kontakt') }}">Kontakt</a></li>
+                            <li><a href="{{ url_for('views.kontakt') }}">Reklamacje</a></li>
+                            <li><a href="{{ url_for('views.kontakt') }}">Warunki dostawy</a></li>
+                            <li><a href="{{ url_for('views.kontakt') }}">Metody płatności</a></li>
+                        </ul>
+                    </div>
+                    <div class="footer-column">
+                        <h6 class="title-of-column">NAJCZĘŚCIEJ ODWIEDZANE</h6>
+                        <ul class="desc-of-column">
+                            <li><a href="{{ url_for('views.flower') }}">Bukiety</a></li>
+                            <li><a href="{{ url_for('views.gift') }}">Wazony</a></li>
+                            <li><a href="{{ url_for('views.mother') }}">Kwiaty na Dzień Matki</a></li>
+                            <li><a href="{{ url_for('views.order') }}">Dostawa kwiatów w ten sam dzień</a></li>
+                        </ul>
+                    </div>
+                    <div class="footer-column">
+                        <h6 class="title-of-column">ODWIEDŹ NAS</h6>
+                        <div class="social-icons">
+                            <a href="https://www.facebook.com/" target="_blank"><img src="{{ url_for('static', filename='pictures-for-site/facebook.webp') }}" alt="Facebook"></a>
+                            <a href="https://www.instagram.com/" target="_blank"><img src="{{ url_for('static', filename='pictures-for-site/instagram.webp') }}" alt="Instagram"></a>
+                            <a href="https://www.pinterest.com/" target="_blank"><img src="{{ url_for('static', filename='pictures-for-site/pinterest.webp') }}" alt="Pinterest"></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </footer>
+        <script>
+            document.addEventListener('DOMContentLoaded', function() {
+            const dropdowns = document.querySelectorAll('.dropdown');
+            let hoverTimeout;
+    
+            dropdowns.forEach(dropdown => {
+                const submenu = dropdown.querySelector('.submenu');
+        
+                dropdown.addEventListener('mouseenter', function() {
+                    clearTimeout(hoverTimeout);
+                    this.classList.add('active');
+                    submenu.style.display = 'block';
+                });
+        
+            dropdown.addEventListener('mouseleave', function() {
+            hoverTimeout = setTimeout(() => {
+                this.classList.remove('active');
+                submenu.style.display = 'none';
+            }, 300);
+        });
+        
+        submenu.addEventListener('mouseenter', function() {
+            clearTimeout(hoverTimeout);
+        });
+        
+        submenu.addEventListener('mouseleave', function() {
+            hoverTimeout = setTimeout(() => {
+                dropdown.classList.remove('active');
+                submenu.style.display = 'none';
+            }, 200);
+        });
+
+        dropdown.addEventListener('click', function(e) {
+            if (window.innerWidth <= 768) {
+                e.preventDefault();
+                this.classList.toggle('active');
+                submenu.style.display = submenu.style.display === 'block' ? 'none' : 'block';
+            }
+        });
+    });
+});
+        document.addEventListener('DOMContentLoaded', function() {
+        const loginForm = document.getElementById('loginForm');
+        const emailInput = document.getElementById('email');
+        const emailError = document.getElementById('emailError');
+
+        if (loginForm) {
+            loginForm.addEventListener('submit', function(event) {
+                const emailValue = emailInput.value.trim();
+            
+            if (!emailValue.includes('@')) {
+                event.preventDefault();
+                emailInput.classList.add('input-error');
+                emailError.style.display = 'block';
+                emailInput.focus();
+            } else {
+                emailInput.classList.remove('input-error');
+                emailError.style.display = 'none';
+            }
+        });
+        
+        emailInput.addEventListener('input', function() {
+            if (this.value.includes('@')) {
+                this.classList.remove('input-error');
+                emailError.style.display = 'none';
+            }
+        });
+        
+        emailInput.addEventListener('keypress', function(e) {
+            if (e.key === 'Enter') {
+                e.preventDefault();
+                document.getElementById('password').focus();
+            }
+        });
+        
+        document.getElementById('password').addEventListener('keypress', function(e) {
+            if (e.key === 'Enter') {
+                loginForm.requestSubmit();
+                }
+        });
+        }
+        });
+        </script>
+        </body>
+    </head>
+</html>

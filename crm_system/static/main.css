@@ -1,0 +1,836 @@
+body {
+    margin: 0px;
+    font-family: 'Montserrat', sans-serif;
+}
+
+a {
+    color: black;
+}
+
+ul {
+    list-style-type: none;
+}
+
+li {
+    display: inline-block;
+}
+
+.container a {
+    text-decoration: none;
+}
+
+.navbar a {
+    text-decoration: none;
+}
+
+.zamow-teraz {
+    width: 100%;
+    height: 7%;
+    margin-top: -20px;
+    background: #3b2d24;
+    background: linear-gradient(90deg,rgba(59, 45, 36, 1) 0%, rgba(179, 139, 100, 1) 50%, rgba(59, 45, 36, 1) 100%);
+    text-align: center;
+}
+
+#tytul {
+    font-size: 18.5px;
+    color: black;
+    padding: 0.3%;
+}
+
+#tytul a {
+    text-decoration: none;
+}
+
+#tytul a:hover {
+    color: beige;
+    transition-duration: 0.2s;
+}
+
+.user-dropdown {
+    position: relative;
+    display: inline-block;
+    cursor: pointer;
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    right: 0;
+    background-color: white;
+    min-width: 200px;
+    box-shadow: 0 8px 16px rgba(0,0,0,0.1);
+    z-index: 100;
+    border-radius: 5px;
+    padding: 10px;
+}
+
+.user-dropdown:hover .dropdown-content {
+    display: block;
+}
+
+.welcome-msg {
+    display: block;
+    padding: 8px 12px;
+    font-weight: 600;
+    color: #3b2d24;
+    border-bottom: 1px solid #eee;
+    margin-bottom: 5px;
+}
+
+.dropdown-content a {
+    display: block;
+    padding: 8px 12px;
+    color: #333;
+    text-decoration: none;
+    transition: background 0.3s;
+}
+
+.dropdown-content a:hover {
+    background-color: #f5f5f5;
+}
+
+.logout-btn {
+    width: 100%;
+    padding: 8px 12px;
+    background-color: #b38b64;
+    color: white !important;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 14px;
+    margin-top: 5px;
+    transition: background 0.3s;
+}
+
+.logout-btn:hover {
+    background-color: #9a7552;
+}
+
+
+.header-right {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    margin-left: auto; 
+}
+
+#flowwy {
+    width: 40%;
+    height: 40%;
+    margin-left: 20px;
+}
+
+#profile {
+    width: 30%;
+    height: 30%;
+}
+
+#cart {
+    width: 80%;
+    height: 80%;
+    margin-left: -80px;
+}
+
+.user-dropdown {
+    position: relative;
+    display: inline-block;
+}
+
+.navbar { 
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    padding: 20px 0;
+}
+
+.space {
+    width: 750px;
+}
+
+.space1 {
+    width: 195px;
+}
+
+.menu {
+    display: inline-flex;
+    margin: 0;
+    padding: 0;
+    position: relative;
+    font-size: 17px;
+    gap: 25px;
+    justify-content: center;
+}
+
+.menu > li {
+    position: relative;
+    margin: 0 15px;
+}
+
+.dropdown {
+    position: relative;
+}
+
+.submenu {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 50%;
+    transform: translateX(-50%);
+    background: white;
+    min-width: 200px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+    padding: 10px 0;
+    z-index: 100; /* określa kolejność nakładania się elementów na stronie, czyli który element zostanie wyświetlony na wierzchu, a który za nim */
+    text-align: left;
+}
+
+.submenu li {
+    display: block;
+    margin: 0;
+    padding: 0;
+}
+
+.submenu a {
+    padding: 8px 20px;
+    display: block;
+    white-space: nowrap;
+    transition: all 0.4s;
+}
+
+.submenu a:hover {
+    background: #f5f5f5;
+}
+
+.menu > li > a {
+    position: relative;
+    padding-bottom: 5px;
+}
+
+.menu > li > a::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    height: 2px;
+    background-color: black;
+    transform: scaleX(0);
+    transform-origin: center; /* określa punkt odniesienia dla transformacji elementu, takich jak obrót, skalowanie czy przechylenie, w tym przypadku będzie się znajdował punkt w centrum elementu */
+    transition: transform 0.5s ease;
+}
+.submenu {
+    transition: all 0.3s ease;
+    opacity: 0;
+    visibility: hidden;
+}
+
+.dropdown:hover .submenu {
+    display: block;
+    opacity: 1;
+    visibility: visible;
+    top: 40px;
+}
+
+.menu > li:hover > a::after {
+    transform: scaleX(1);
+}
+
+#kwiaty-na-stole {
+    width: 100%;
+    height: auto;
+    position: relative;
+}
+
+#opis {
+    position: absolute;
+    bottom: 20px;
+    left: 20px;
+    color: white;
+    font-size: 70px;
+    font-weight: bold;
+    text-shadow: 1px 1px 3px rgba(0,0,0,0.8);
+    padding: 10px 15px;
+    margin-bottom: 150px;
+}
+
+.aktualnosci {
+    position: relative;
+    display: inline-block;
+}
+
+#btn {
+    position: absolute;
+    background-color: rgba(0, 0, 0, 0.364);
+    margin-left: 860px;
+    bottom: 30px;
+    border-radius: 30%;
+    transition: all 0.4s ease;
+    padding: 10px;
+}
+
+#buy {
+    font-size: 25px;
+    color: beige; 
+    padding: 5px;
+    display: block;
+    transition: color 0.4s ease
+}
+
+#buy :hover {
+    color: white;
+    text-shadow: 0 0 5px rgba(255,255,255,0.5);
+}
+
+.over-gallery {
+    display: flex;
+    justify-content: center;
+    position: relative;
+    margin: 20px 0;
+    padding: 0 20px;
+}
+
+.new-flower {
+    font-size: 30px;
+    font-family: "DM Serif Text", serif;
+    text-align: center;
+}
+
+.see-all {
+    position: absolute;
+    font-size: 15px;
+    right: 10px;
+}
+
+.new-gallery {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr); /* W 1 rzędzie 4 kolumny */
+    gap: 15px; 
+    padding: 0 20px;
+    margin: 0 auto;
+    max-width: 1200px;
+}
+
+.name-desc-for-gallery a {
+    text-decoration: none;
+}
+
+.name-desc-for-gallery {
+    display: flex;
+    flex-direction: column; /* Układ pionowy: obrazek nad tekstem */
+}
+
+.name {
+    margin-top: 15px;
+    text-align: center;
+    font-size: 16px;
+    font-weight: 600;
+    padding: 0 5px;
+    flex-grow: 1; /* Wyrównuje tekst do dołu (opcjonalne) */
+}
+
+.desc {
+    text-align: center;
+    margin-top: 20px;
+}
+
+.price {
+    margin-top: 15px;
+    text-align: center; 
+    font-weight: 500;
+}
+
+.over-bestseller-gallery {
+    display: flex;
+    justify-content: center;
+    position: relative;
+    margin: 20px 0;
+    padding: 0 20px;
+}
+
+.best-flower {
+    font-size: 30px;
+    font-family: "DM Serif Text", serif;
+    text-align: center;
+}
+
+.see-all1 {
+    position: absolute;
+    font-size: 15px;
+    right: 10px;
+}
+
+.bestseller-gallery {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr); /* W 1 rzędzie 4 kolumny */
+    gap: 15px; 
+    padding: 0 20px;
+    margin: 0 auto;
+    max-width: 1200px;
+}
+
+.name-desc-for-bestseller a {
+    text-decoration: none;
+}
+
+.name-desc-for-bestseller {
+    display: flex;
+    flex-direction: column; /* Układ pionowy: obrazek nad tekstem */
+}
+
+.name1 {
+    margin-top: 15px;
+    text-align: center;
+    font-size: 16px;
+    font-weight: 600;
+    padding: 0 5px;
+    flex-grow: 1; /* Wyrównuje tekst do dołu */
+}
+
+.desc1 {
+    text-align: center;
+    margin-top: 20px;
+}
+
+.price1 {
+    margin-top: 15px;
+    text-align: center; 
+    font-weight: 500;
+}
+
+.why-flowwy {
+    margin-top: 100px;
+    text-align: center;
+    padding: 20px;
+}
+
+.why-us-box {
+    max-width: 1200px;
+    margin: 0 auto;
+    background-color: rgba(226, 226, 226, 0.364);
+    padding: 40px 20px;
+    border-radius: 10px;
+}
+
+.explanation {
+    font-size: 30px;
+    font-family: "DM Serif Text", serif;
+    margin-bottom: 40px;
+}
+
+.features-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 20px;
+    justify-items: center;
+}
+
+.feature {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    max-width: 200px;
+}
+
+.feature-icon {
+    width: 50px;
+    height: 50px;
+    margin-bottom: 15px;
+}
+
+.feature-text {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 16px;
+    font-weight: 500;
+}
+
+.feature-desc {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 14px;
+}
+
+.footer-container {
+    background-color: #f8f8f8;
+    padding: 40px 20px;
+    margin-top: 50px;
+}
+
+.footer-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 30px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.footer-column h6 {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 16px;
+    margin-bottom: 20px;
+    color: #3b2d24;
+}
+
+.footer-column ul {
+    padding: 0;
+}
+
+.footer-column li {
+    display: block;
+    margin-bottom: 10px;
+}
+
+.footer-column a {
+    text-decoration: none;
+    color: #555;
+    font-size: 14px;
+    transition: color 0.3s;
+}
+
+.footer-column a:hover {
+    color: #2f2010;
+}
+
+.social-icons {
+    display: flex;
+    gap: 15px;
+    justify-content: center;
+}
+
+.desc-of-column {
+    text-align: center;
+}
+
+.title-of-column {
+    text-align: center;
+}
+
+.social-icons img {
+    width: 40px;
+    height: 40px;
+}
+
+@media (max-width: 768px) {
+    .zamow-teraz {
+        height: auto;
+        padding: 10px 0;
+    }
+    
+    #tytul {
+        font-size: 14px;
+        padding: 10px;
+    }
+    
+    .logo-profile-cart ul.nav {
+        flex-direction: row;
+        justify-content: space-between;
+        padding: 0 15px;
+    }
+    
+    .space, .space1 {
+        display: none;
+    }
+    
+    #flowwy {
+        width: 120px;
+        height: auto;
+        margin: 0;
+    }
+    
+    #profile, #cart {
+        width: 30px;
+        height: 30px;
+        margin: 0;
+    }
+
+    .navbar {
+        padding: 10px 0;
+    }
+    
+    .menu {
+        flex-direction: column;
+        gap: 5px;
+        padding: 0 15px;
+    }
+    
+    .menu > li {
+        width: 100%;
+        margin: 5px 0;
+        text-align: center;
+    }
+    
+    .dropdown:hover .submenu {
+        position: static;
+        transform: none;
+        width: 100%;
+        box-shadow: none;
+    }
+
+    #kwiaty-na-stole {
+        height: 300px;
+        object-fit: cover;
+    }
+    
+    #opis {
+        font-size: 24px;
+        margin-bottom: 80px;
+        left: 10px;
+        bottom: 10px;
+    }
+    
+    #btn {
+        position: static;
+        margin: 15px auto;
+        width: 80%;
+        border-radius: 5px;
+        text-align: center;
+    }
+
+    .new-gallery, .bestseller-gallery {
+        grid-template-columns: repeat(2, 1fr);
+        padding: 0 10px;
+    }
+    
+    .over-gallery, .over-bestseller-gallery {
+        flex-direction: column;
+        align-items: center;
+    }
+    
+    .see-all, .see-all1 {
+        position: static;
+        margin-top: 10px;
+    }
+
+    .features-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 15px;
+    }
+    
+    .feature {
+        max-width: 100%;
+    }
+
+    .footer-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 20px;
+    }
+    
+    .social-icons {
+        justify-content: center;
+    }
+}
+
+@media (max-width: 768px) {
+    .footer-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 768px) {
+    .features-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 30px;
+    }
+}
+
+@media (max-width: 480px) {
+    .features-grid {
+        grid-template-columns: 1fr;
+    }
+}
+@media (max-width: 768px) {
+    .new-gallery {
+      grid-template-columns: repeat(2, 1fr); 
+    }
+  }
+
+@media (max-width: 768px) {
+    .bestseller-gallery {
+      grid-template-columns: repeat(2, 1fr); 
+    }
+  }
+
+@media (max-width: 768px) {
+    .zamow-teraz {
+        height: auto;
+        padding: 10px 0;
+    }
+    
+    #tytul {
+        font-size: 14px;
+        padding: 10px;
+    }
+    
+    .logo-profile-cart ul.nav {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    
+    .space, .space1 {
+        width: 0;
+        display: none;
+    }
+    
+    #flowwy {
+        width: 80%;
+        height: auto;
+        margin: 10px 0;
+    }
+    
+    #profile, #cart {
+        width: 40px;
+        height: 40px;
+        margin: 5px 0;
+    }
+    
+    .navbar {
+        padding: 10px 0;
+    }
+    
+    .menu {
+        flex-direction: column;
+        gap: 5px;
+        padding: 0 15px;
+    }
+    
+    .menu > li {
+        margin: 5px 0;
+        width: 100%;
+    }
+    
+    .menu > li > a {
+        display: block;
+        padding: 10px;
+        border-bottom: 1px solid #eee;
+    }
+    
+    .submenu {
+        position: static;
+        transform: none;
+        box-shadow: none;
+        display: none;
+        width: 100%;
+        opacity: 1;
+        visibility: visible;
+        padding: 0;
+    }
+    
+    .dropdown:hover .submenu,
+    .dropdown.active .submenu {
+        display: block;
+        top: 0;
+    }
+    
+    .submenu li a {
+        padding: 8px 20px;
+    }
+    
+    #kwiaty-na-stole {
+        height: 300px;
+        object-fit: cover; /* nakazuje elementowi skalowanie swojej zawartości tak, aby pasowała do współczynnika proporcji zawierającego go elementu, jednocześnie całkowicie go zakrywając */
+    }
+    
+    #opis {
+        font-size: 24px;
+        margin-bottom: 80px;
+        left: 10px;
+        bottom: 10px;
+    }
+    
+    #btn {
+        position: absolute;
+        margin-left: 0;
+        right: 10px;
+        bottom: 10px;
+        padding: 5px;
+    }
+    
+    #buy {
+        font-size: 16px;
+    }
+}
+
+@media (max-width: 768px) {
+    .menu {
+        display: block;
+    }
+    
+    .menu > li {
+        display: block;
+        margin: 10px 0;
+    }
+    
+    .submenu {
+        position: static;
+        transform: none;
+        box-shadow: none;
+        display: none;
+        width: 100%;
+    }
+    
+    .dropdown.active .submenu {
+        display: block;
+    }
+}
+
+@media (max-width: 480px) {
+    .aktualnosci {
+        position: relative;
+        height: auto;
+    }
+    
+    #opis {
+        position: static;
+        padding: 15px;
+        text-align: center;
+        font-size: 18px;
+    }
+    
+    #btn {
+        position: static;
+        margin: 15px auto;
+        width: 80%;
+    }
+    
+    .new-gallery, .bestseller-gallery {
+        grid-template-columns: 1fr;
+        gap: 20px;
+    }
+    
+    .name-desc-for-gallery, .name-desc-for-bestseller {
+        margin: 0 10px;
+    }
+    
+    .why-us-box {
+        padding: 20px 10px;
+    }
+    
+    .features-grid {
+        grid-template-columns: 1fr;
+        gap: 15px;
+    }
+    
+    .feature {
+        max-width: 100%;
+    }
+    
+    .over-gallery, .over-bestseller-gallery {
+        flex-direction: column;
+        align-items: center;
+        gap: 10px;
+    }
+    
+    .new-flower, .best-flower, .see-all, .see-all1 {
+        text-align: center;
+    }
+    
+    .footer-grid {
+        grid-template-columns: 1fr;
+        gap: 20px;
+    }
+    
+    .footer-column {
+        text-align: center;
+    }
+}
